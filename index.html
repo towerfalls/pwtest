@@ -32,8 +32,12 @@ Pushwoosh.push(['init', {
 }]);
 </script>
 
-  <button onclick="Pushwoosh.push(['subscribe']);">Subscribe</button>
-
+ <button onclick="Pushwoosh.subscribe()">Subscribe</button>
+<script>
+  Pushwoosh.push(['onSubscribe', function(api) {
+    console.log('User successfully subscribed');
+  }]);
+</script>
     
 </body>
 </html>
